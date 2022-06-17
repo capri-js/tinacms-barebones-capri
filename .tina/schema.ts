@@ -42,11 +42,11 @@ const schema = defineSchema({
 
 export default schema;
 
-const branch = process.env.NEXT_PUBLIC_EDIT_BRANCH || "main";
+const branch = process.env.TINA_EDIT_BRANCH || "main";
 const apiURL =
   process.env.NODE_ENV == "development"
     ? "http://localhost:4001/graphql"
-    : `https://content.tinajs.io/content/${process.env.NEXT_PUBLIC_TINA_CLIENT_ID}/github/${branch}`;
+    : `https://content.tinajs.io/content/${process.env.TINA_CLIENT_ID}/github/${branch}`;
 
 export const tinaConfig = defineConfig({
   apiURL,
@@ -56,12 +56,12 @@ export const tinaConfig = defineConfig({
       const RouteMapping = new RouteMappingPlugin((collection, document) => {
         if (["page"].includes(collection.name)) {
           if (document._sys.filename === "home") {
-            return "/";
+            return "#preview/";
           }
         }
 
         if (["post"].includes(collection.name)) {
-          return `/posts/${document._sys.filename}`;
+          return `#preview/posts/${document._sys.filename}`;
         }
 
         return undefined;

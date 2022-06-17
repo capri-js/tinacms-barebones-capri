@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type Props = {
   children: ReactNode;
@@ -17,9 +18,9 @@ export function Layout({ children }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
       <header>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
         {" | "}
-        <a href="/posts">Posts</a>
+        <Link to="/posts">Posts</Link>
       </header>
       <main>{children}</main>
     </div>
