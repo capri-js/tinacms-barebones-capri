@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "tinacms server:start -c vite",
-    "build": "tinacms server:start -c \"NODE_ENV=development vite build && vite build --ssr\"",
+    "build": "tinacms server:start -c \"vite build && vite build --ssr\"",
     "preview": "vite preview"
   },
   "dependencies": {
