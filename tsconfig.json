@@ -2,11 +2,10 @@
   "compilerOptions": {
     "strict": true,
     "noEmit": true,
-    "module": "ES2020",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "target": "ES2017",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client"],
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

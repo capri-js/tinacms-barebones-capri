@@ -1,7 +1,7 @@
 import "./tina/fetchPolyfill";
 import { RenderFunction, renderToString } from "@capri-js/react";
 import { StrictMode } from "react";
-import { StaticRouter } from "react-router-dom/server.js";
+import { StaticRouter } from "react-router-dom/server";
 
 import { App } from "./App";
 
