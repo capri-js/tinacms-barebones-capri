@@ -4,7 +4,7 @@ import EnvironmentPlugin from "vite-plugin-environment";
 import { defineConfig } from "vite";
 
 export default defineConfig(async () => {
-  const { default: capri } = await import("@capri-js/react/vite-plugin");
+  const { default: capri } = await import("@capri-js/react");
   return {
     build: {
       sourcemap: true,

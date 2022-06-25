@@ -10,7 +10,6 @@ const query = `{
 
 export function Home() {
   const { data } = useTina<{ page: Page }>({ query });
-  console.log("Home. Data:", data);
   if (!data?.page) return null;
   return <TinaMarkdown content={data.page.body} />;
 }
