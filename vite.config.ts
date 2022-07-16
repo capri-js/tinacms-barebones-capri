@@ -12,12 +12,17 @@ export default defineConfig(async () => {
     define: {
       "process.platform": "'browser'",
     },
+    legacy: {
+      buildSsrCjsExternalHeuristics: true,
+    },
+    ssr: {
+      format: "cjs",
+    },
     plugins: [
       EnvironmentPlugin("all", { prefix: "TINA_" }),
       react(),
       capri({
         spa: "/admin",
-        ssrFormat: "commonjs",
       }),
     ],
   };
